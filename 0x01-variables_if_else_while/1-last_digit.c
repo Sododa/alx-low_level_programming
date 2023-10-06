@@ -7,7 +7,9 @@
  * Return: Always (Success)
  *
  */ 
+
 int main(void)
+
 {
 int n, last_digit;
 srand(time(0));
