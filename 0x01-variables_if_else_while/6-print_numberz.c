@@ -1,8 +1,9 @@
 #include <stdio.h>
 
 /**
+ * main This program prints the digits from 0 to 9 followed by a newline.
  *
- * This program prints the digits from 0 to 9 followed by a newline. 
+ * Return: Always 0 (success) 
  */
 
 int main(void)
