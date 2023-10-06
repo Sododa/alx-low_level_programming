@@ -1,16 +1,20 @@
 #include <stdio.h>
-
+#include <stdlib.h>
+#include <time.h>
 /**
- * main This program prints the digits from 0 to 9 followed by a newline.
- *
- * Return: Always 0 (success) 
+ * main - Entry point
+ * Return: Always 0 (Success)
  */
 
 int main(void)
 {
-int num;
-for (num = 0; num < 10; num++)
-putchar((num % 10) + '0');
+int digit = 0;
+while (digit <= 9)
+{
+putchar(digit + '0');
+digit++;
+}
 putchar('\n');
 return (0);
 }
+
