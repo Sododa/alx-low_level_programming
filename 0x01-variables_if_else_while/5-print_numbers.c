@@ -1,18 +1,22 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
 /**
- *
  * main - Entry point
- *
- * Return: Always 0 (success)
+ * Return: Always 0 (Success)
  */
+
 int main(void)
+
 {
-char digit;
-for (digit = '0'; digit <= '9'; digit++)
+int digit = 0;
+while (digit <= 9)
 {
-putchar(digit);
+putchar(digit + '0');
+digit++;
 }
 putchar('\n');
 return (0);
 }
+
