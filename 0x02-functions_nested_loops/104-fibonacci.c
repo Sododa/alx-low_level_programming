@@ -7,21 +7,19 @@
  */
 int main(void)
 {
-unsigned long a = 1, b = 2, c;
-int count = 0;
-
-printf("%lu, %lu, ", a, b);
-while (count < 97) // Updated to print 98 numbers
+unsigned long fib1 = 1, fib2 = 2, next;
+int count;
+printf("%lu, %lu, ", fib1, fib2);
+for (count = 2; count < 98; count++)
 {
-c = a + b;
-a = b;
-b = c;
-if (count == 96)
-printf("%lu\n", c);
-else
-printf("%lu, ", c);
-count++;
+next = fib1 + fib2;
+printf("%lu", next);
+if (count < 97)
+printf(", ");
+fib1 = fib2;
+fib2 = next;
 }
+printf("\n");
 return (0);
 }
 
