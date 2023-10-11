@@ -8,15 +8,14 @@
 int main(void)
 {
 unsigned long a = 1, b = 2, c;
-int count = 2; // Start with 2 to account for the first two numbers
-
+int count = 0;
 printf("%lu, %lu, ", a, b);
-while (count < 100) // Print 98 Fibonacci numbers
+while (count < 96)
 {
 c = a + b;
 a = b;
 b = c;
-if (count == 99)
+if (count == 95)
 printf("%lu\n", c);
 else
 printf("%lu, ", c);
@@ -24,4 +23,3 @@ count++;
 }
 return (0);
 }
-
