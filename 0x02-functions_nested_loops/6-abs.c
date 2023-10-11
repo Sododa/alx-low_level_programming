@@ -7,10 +7,9 @@
  */
 
 int _abs(int c)
-
 {
 
-if (c < 0) 
+if (c < 0)
 {
 int abs_val;
 abs_val = c * -1;
