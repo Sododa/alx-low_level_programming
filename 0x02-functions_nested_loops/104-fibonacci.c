@@ -11,12 +11,12 @@ unsigned long a = 1, b = 2, c;
 int count = 0;
 
 printf("%lu, %lu, ", a, b);
-while (count < 96)
+while (count < 97) // Updated to print 98 numbers
 {
 c = a + b;
 a = b;
 b = c;
-if (count == 95)
+if (count == 96)
 printf("%lu\n", c);
 else
 printf("%lu, ", c);
@@ -24,3 +24,4 @@ count++;
 }
 return (0);
 }
+
