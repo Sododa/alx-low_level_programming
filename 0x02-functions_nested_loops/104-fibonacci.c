@@ -17,10 +17,10 @@ temp = current + next;
 current = next;
 next = temp;
 
-if (count == 98)
+if (count == 96)
 printf("%lu\n", temp);
 else
 printf("%lu, ", temp);
 }
-return 0;
+return (0);
 }
