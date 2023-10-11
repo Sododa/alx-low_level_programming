@@ -7,19 +7,20 @@
  */
 int main(void)
 {
-unsigned long a = 1, b = 2, c;
-int count = 0;
-printf("%lu, %lu, ", a, b);
-while (count < 96)
+unsigned long current = 1, next = 2, temp;
+int count;
+
+printf("%lu, %lu, ", current, next);
+for (count = 2; count < 98; count++)
 {
-c = a + b;
-a = b;
-b = c;
-if (count == 95)
-printf("%lu\n", c);
+temp = current + next;
+current = next;
+next = temp;
+
+if (count == 98)
+printf("%lu\n", temp);
 else
-printf("%lu, ", c);
-count++;
+printf("%lu, ", temp);
 }
-return (0);
+return 0;
 }
