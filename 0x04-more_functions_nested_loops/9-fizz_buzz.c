@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- *main - entry point
+ * main - entry point
  *
  * Description: print the numbers 1 - 100 
  * Fizz for multiples of 3, Buzz for multiples of 5, 
@@ -21,7 +21,8 @@ else if (i % 3 == 0)
 printf("Fizz");
 else if (i % 5 == 0)
 printf("Buzz");
-else printf("%i", i);
+else
+printf("%i", i);
 if (i < 100)
 printf(" ");
 }
