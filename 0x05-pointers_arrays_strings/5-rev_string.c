@@ -17,7 +17,7 @@ while (half--)
 {
 temp = s[length - z - 1];
 s[length - z - 1] = s[z];
-s[z] = temp; 
+s[z] = temp;
 z++;
 }
 }
