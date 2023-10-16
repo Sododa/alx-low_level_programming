@@ -3,9 +3,10 @@
 /**
  * _atoi - convert a string to an integer
  * @s: pointer
+ * Return: always 0
  */
 
- int _atoi(char *s)
+int _atoi(char *s)
 
 {
 int sign = 1;
@@ -22,7 +23,7 @@ sign *= 1;
 else if (*s >= '0' && *s <= '9')
 {
 digit = *s - '0';
-num = num * 10 + sign * digit;
+num = num * 10 + sign *digit;
 in_num = 1;
 }
 else if (in_num)
@@ -31,5 +32,5 @@ break;
 }
 }
 
-return num;
+return (num);
 }
