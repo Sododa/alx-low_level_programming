@@ -4,7 +4,7 @@
  *_strncpy -function that copies a string
  *@dest:destination string pointer
  *@src:source string pointer
- *@n: number of bytes to be used
+ *@n:number of bytes to be used
  *Return:a pointer to string
  */
 
