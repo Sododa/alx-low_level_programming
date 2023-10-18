@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _strncat - function that concatenates 
+ *_strncat - function that concatenates 
  * @dest: destination string pointer
  * @src: source string pointer
  * @n: number of bytes to be concatenated
@@ -19,7 +19,7 @@ while (dest[length_of_string] != '\0')
 {
 length_of_string++;
 }
-for (z = 0; z < n && src[z] != '\0'; z++, length_of_string++)
+for (z = 0; z < n && src[z] != '\0'; z++; length_of_string++)
 {
 dest[length_of_string] = src[z];
 }
