@@ -1,9 +1,10 @@
 #include "main.h"
 /**
- * cap_string - function that capitalizes all words of a string
- * @s: points to the string
- * Return: pointer to s.
+ *cap_string - function that capitalizes all words of a string
+ *@s: points to the string
+ *Return: pointer to s.
  */
+
 char *cap_string(char *s)
 {
 int string_count;
@@ -11,7 +12,7 @@ int string_count;
 string_count = 0;
 while (s[string_count] != '\0')
 {
-/* if next character after count is a char, capitalize it */
+/*if next character after count is a char,capitalize it */
 if (s[0] >= 97 && s[0] <= 122)
 {
 s[0] = s[0] - 32;
