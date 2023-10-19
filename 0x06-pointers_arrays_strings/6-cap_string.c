@@ -1,53 +1,33 @@
 #include "main.h"
-
 /**
- * is_separator - Checks if a character is a word separator.
- * @c: The character to check.
- *
- * Return: 1 if the character is a separator, 0 otherwise.
+ * cap_string - function that capitalizes all words of a string
+ * @s: points to the string
+ * Return: pointer to s.
  */
-int is_separator(char c)
+char *cap_string(char *s)
 {
-char separators[] = " \t\n,;.!?\"(){}";
-
-for (int i = 0; separators[i]; i++)
+int string_count;
+/* scan through string */
+string_count = 0;
+while (s[string_count] != '\0')
 {
-if (separators[i] == c)
+/* if next character after count is a char, capitalize it */
+if (s[0] >= 97 && s[0] <= 122)
 {
-return (1);
+s[0] = s[0] - 32;
+}
+if (s[string_count] == ' ' || s[string_count] == '\t' || s[string_count] == '\n'
+|| s[string_count] == ',' || s[string_count] == ';' || s[string_count] == ','
+|| s[string_count] == '.' || s[string_count] == '!' || s[string_count] == '?'
+|| s[string_count] == '"' || s[string_count] == '(' || s[string_count] == ')'|| s[string_count] == '{' || s[string_count] == '}')
+{
+if (s[string_count + 1] >= 97 && s[string_count + 1] <= 122)
+{
+s[string_count + 1] = s[string_count + 1] - 32;
 }
 }
-
-return (0);
+string_count++;
 }
-
-/**
- * cap_string - Capitalizes the first letter of each word in a string.
- * @str: The string to be capitalized.
- *
- * Return: A pointer to the resulting string.
- */
-char *cap_string(char *str)
-{
-int capitalize_next = 1;
-int i;
-
-for (i = 0; str[i] != '\0'; i++)
-{
-if (is_separator(str[i]))
-{
-capitalize_next = 1;
-}
-else if (capitalize_next && str[i] >= 'a' && str[i] <= 'z')
-{
-str[i] = str[i] - 32; // Convert to uppercase by subtracting 32
-capitalize_next = 0;
-}
-else
-{
-capitalize_next = 0;
-}
-}
-return (str);
+return (s);
 }
 
