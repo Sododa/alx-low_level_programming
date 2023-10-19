@@ -1,27 +1,29 @@
 #include "main.h"
-#include <stdio.h>
+
 /**
  * rot13 - the prototype
- *@s - to input 
+ *@str - to input 
  * 
- * Return: *s
+ * Return: *str
  */
-char *rot13(char *s)
+
+char *rot13(char *str)
 {
+char *p = str;
 int i;
-int j;
-char data1[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-char datarot[] = "NOPQRSTUVWXYZABCDEFGHIJKLMmnopqrstuvwxyzabcdefghijklm";
-for (i = 0; s[i] != '\0'; i++)
+char alpha[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+char rot13[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+while (*p)
 {
-for (j = 0; j < 52; j++)
+for (i = 0; alpha[i]; i++)
 {
-if (s[i] == data1[j])
+if (*p == alpha[i])
 {
-s[i] = datarot[j];
+*p = rot13[i];
 break;
 }
 }
+p++;
 }
-return (s);
+return (str);
 }
