@@ -5,28 +5,28 @@
 *Return: pointer to string.
 */
 char *cap_string(char *str)
+{ int i;
+int capitalize_next = 1; 
+/*Indicates whether the next character should be capitalized */
+
+for (i = 0; str[i] != '\0'; i++)
 {
-int index = 0;
-while (str[index])
+if (str[i] == ' ' || str[i] == '\t' || str[i] == '\n' ||
+str[i] == ',' || str[i] == ';' || str[i] == '.' ||
+str[i] == '!' || str[i] == '?' || str[i] == '"' ||
+str[i] == '(' || str[i] == ')' || str[i] == '{')
 {
-while (!(str[index] >= 'a' && str[index] <= 'z'))
-index++;
-if (str[index - 1] == ' '||
-str[index - 1] == '\t'||
-str[index - 1] == '\n'||
-str[index - 1] == ','||
-str[index - 1] == ';'||
-str[index - 1] == '.'||
-str[index - 1] == '!'||
-str[index - 1] == '?'||
-str[index - 1] == '"'||
-str[index - 1] == '('||
-str[index - 1] == ')'||
-str[index - 1] == '{'||
-str[index - 1] == '}'||
-index == 0)
-str[index] -= 32;
-index++;
+capitalize_next = 1;
+}
+else if (capitalize_next && str[i] >= 'a' && str[i] <= 'z')
+{
+str[i] = str[i] - 'a' + 'A';
+capitalize_next = 0;
+}
+else
+{
+capitalize_next = 0;
+}
 }
 return (str);
 }
