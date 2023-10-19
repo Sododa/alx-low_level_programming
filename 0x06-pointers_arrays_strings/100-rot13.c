@@ -1,28 +1,27 @@
 #include "main.h"
+#include <stdio.h>
 /**
- * *rot13 - the prototype
- * str - to input 
- * Return: str always
+ * rot13 - the prototype
+ *@s - to input 
+ * 
+ * Return: *s
  */
-char *rot13(char *str)
+char *rot13(char *s)
 {
-char *input = str;
-char *output = str;
-
-while (*input)
+int i;
+int j;
+char data1[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+char datarot[] = "NOPQRSTUVWXYZABCDEFGHIJKLMmnopqrstuvwxyzabcdefghijklm";
+for (i = 0; s[i] != '\0'; i++)
 {
-if ((*input >= 'a' && *input <= 'z') || (*input >= 'A' && *input <= 'Z'))
+for (j = 0; j < 52; j++)
 {
-char base = (*input >= 'a' && *input <= 'z') ? 'a' : 'A';
-            *output = ((*input - base + 13) % 26) + base;
-}
-else
+if (s[i] == data1[j])
 {
-*output = *input;
+s[i] = datarot[j];
+break;
 }
-input++;
-output++;
 }
-return (str);
 }
-
+return (s);
+}
