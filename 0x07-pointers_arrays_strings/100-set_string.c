@@ -3,7 +3,7 @@
  * set_string - entry 
  * @s:input
  * @to: input
- * Return: always
+ * Return:always 0
  */
 void set_string(char **s, char *to)
 {
