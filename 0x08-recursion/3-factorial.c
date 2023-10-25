@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- * _strlen_recursion - Returns the length of the string
- * @s: The string to be measured
- * Return:the length of the string
+ * factorial - Returns the factorial of a number
+ * @n: numberto return the factorial from
+ * Return: factorial of n
  */
 int factorial(int n)
 {
