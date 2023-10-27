@@ -4,7 +4,6 @@
  *@dest: memory where to be stored
  *@src: memory where to be copied
  *@n: number of bytes
- *
  *Return:memory with n byte changed
  */
 char *_memcpy(char *dest, char *src, unsigned int n)
