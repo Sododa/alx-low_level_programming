@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * main-multiplies
+ * main - multiplies
  * @argc: argument count
  * argv: arguments
  * Return: 0 always
