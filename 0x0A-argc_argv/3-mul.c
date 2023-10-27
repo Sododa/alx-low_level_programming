@@ -1,12 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
-*main - multiplies two numbers.
-*@argc:argument count
-*@argv:arguments null
-*
-*Return:0
-*/
+ * main-multiplies
+ * @argc: argument count
+ * argv: arguments
+ * Return: 0 always
+ */
 int main(int argc, char **argv)
 {
 int x, y;
