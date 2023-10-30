@@ -29,7 +29,7 @@ while (s2[i++] != '\0')
 len2++;
 }
 len = len1 + len2;
-result = (char *)malloc(sizeof(char) * (len +1));
+result = (char *)malloc(sizeof(char) * (len + 1));
 if (result == NULL)
 return (NULL);
 for (i = 0; i < len1; i++)
