@@ -1,7 +1,15 @@
 #ifndef MAIN_H
 #define MAIN_H
-#include <stddef.h>
+#include <stdio.h>
 #include <stdlib.h>
+#include <stddef.h>
+#define min(x, y) (((x) < (y)) ? (x) : (y))
+int find_len(char *str);
+int len(char *str);
+char *create_xarray(int size);
+char *iterate_zeroes(char *str);
+void get_prod(char *prod, char *mult, int digit, int zeroes);
+void add_nums(char *final_prod, char *next_prod, int next_len);
 void _print(char *str, int l);
 char *mul(char n, char *num, int num_index, char *dest, int dest_index);
 int check_for_digits(char **av);
