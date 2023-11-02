@@ -1,11 +1,9 @@
-include "main.h"
-
-
+#include "main.h"
 /**
 * string_nconcat - a function that concatenates two strings.
 *
-* @s1: first character
-* @s2: secound character
+* @s1: first char
+* @s2: secound char
 * @n: unsigned int
 *
 * Return: If the function fails, it should return NULL
