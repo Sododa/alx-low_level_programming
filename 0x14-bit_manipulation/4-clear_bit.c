@@ -7,10 +7,8 @@
  */
 int clear_bit(unsigned long int *n, unsigned int index)
 {
-unsigned long int maximum = 0x01;
-maximum = ~(maximum << index);
-if (maximum == 0x00)
+if (index > sizeof(n) * 8)
 return (-1);
-*n &= maximum;
+*n &= ~(1 << index);
 return (1);
 }
