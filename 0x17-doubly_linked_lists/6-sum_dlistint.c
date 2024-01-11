@@ -2,8 +2,6 @@
 
 /**
  * sum_dlistint - returns the sum of all the data (n)
- * 
- *
  * @head: head of the list node
  * Return:if the list is empty
  */
