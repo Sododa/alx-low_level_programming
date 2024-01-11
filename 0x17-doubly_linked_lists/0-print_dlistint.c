@@ -1,8 +1,8 @@
 #include "lists.h"
 /**
- * print_dlistint - prints doubly linled list integer
+ * print_dlistint- prints doubly linled list integer
  * @h: the head of the linled list
- * return: the number of nodes
+ * Return: the number of nodes
  */
 size_t print_dlistint(const dlistint_t *h)
 {
